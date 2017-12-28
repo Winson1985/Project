@@ -7,7 +7,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PracticesCpp.cpp">
+    <ClCompile Include="string_find.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
