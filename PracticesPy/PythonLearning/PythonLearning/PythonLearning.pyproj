@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4035699a-608a-4a2c-b15f-5bbffbb696dd</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PythonLearning.py</StartupFile>
+    <StartupFile>list.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -12,6 +12,7 @@
     <Name>PythonLearning</Name>
     <RootNamespace>PythonLearning</RootNamespace>
     <InterpreterId>Global|canopy.enthought.com|User</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,10 +23,11 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="PythonLearning.py" />
+    <InterpreterReference Include="Global|canopy.enthought.com|User" />
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="Global|canopy.enthought.com|User" />
+    <Compile Include="funcs.py" />
+    <Compile Include="list.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
