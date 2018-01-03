@@ -97,15 +97,63 @@ a.insert(1, 0.0)
 print("a = ", a)
 print("b = ", b)
 
+# new a dict
+aa = 0.0
+bb = 1.0
+cc = 2.0
+dict = {aa:0, bb:3, cc:2}
+print("dict[] = ")
+print(dict)
+
+# Setdefault in dict
+dd = 3.0
+dict.setdefault(dd, 4)
+print(dict)
+
+# Delete in dict
+del(dict[dd])
+print(dict)
+
+# erogodic dict
+for k, v in dict.items():
+    print("\nKey: " + str(k))
+    print("Value: " + str(v))
+
+for k in dict.keys():
+    print("\nKey: " + str(k))
+
+for v in dict.values():
+    print("\nValue: " + str(v))
+
+
+# fromkeys in dict
+l = (0.0, 1.0, 2.0, 3.0)
+new_dict = dict.fromkeys(l)
+print(new_dict)
+new_dict = dict.fromkeys(l,'Hello')
+print(new_dict)
+
+# input()
+name = input("Please inter the name: ")
+print("The enterred name is " + name)
+
 # include other lib
 import sys
+sys.path.append('C:\\Users\\qiuyo\\Documents\\Projects\\Codes\\Project\\Project')
 
-sys.path.append('C:\\Users\\qiuyo\\Documents\\Projects\\Codes\\Project\\Project\\PracticesPy\\PythonLearning\\PythonLearning')
-
+# import module and use functions
 import funcs as f
-
 dampingratio = f.LogDamp2DampRatio(0.001/100)*100
 print("dampingratio = ", dampingratio)
 logdamp = f.DampRatio2LogDamp(1/100.0)*100
 print("logdamp = ", logdamp)
 
+# import some functions from module
+from funcs import DampRatio2LogDamp, LogDamp2DampRatio
+dampingratio = DampRatio2LogDamp(1.0/100)*100
+print("logdamp = ", logdamp)
+
+# import all functions from module
+from funcs import *
+logdamp = DampRatio2LogDamp(1/100.0)*100
+print("logdamp = ", logdamp)

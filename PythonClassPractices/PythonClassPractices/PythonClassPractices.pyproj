@@ -2,17 +2,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>4035699a-608a-4a2c-b15f-5bbffbb696dd</ProjectGuid>
+    <ProjectGuid>56d435cc-01c6-45c1-b981-ff6cfd78d9bf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PythonPractices_List.py</StartupFile>
+    <StartupFile>PythonClassPractices.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>PythonLearning</Name>
-    <RootNamespace>PythonLearning</RootNamespace>
+    <Name>PythonClassPractices</Name>
+    <RootNamespace>PythonClassPractices</RootNamespace>
     <InterpreterId>Global|canopy.enthought.com|User</InterpreterId>
-    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,11 +22,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <InterpreterReference Include="Global|canopy.enthought.com|User" />
+    <Compile Include="classes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PythonClassPractices.py" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="funcs.py" />
-    <Compile Include="PythonPractices_List.py" />
+    <InterpreterReference Include="Global|canopy.enthought.com|User" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
