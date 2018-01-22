@@ -1,0 +1,4 @@
+set loadpath "C:\qiuyo\Documents\Projects\Codes\Project\Project\PlotOutData\PlotOutData"
+set xlabel "Time [sec]"
+set ylabel "GenTorque_SideSide_A -"
+plot "EN30_LM120_90HH.out" using 1:($198) with lines title "GenTorque_SideSide_A"

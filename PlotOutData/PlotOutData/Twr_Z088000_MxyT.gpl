@@ -1,0 +1,4 @@
+set loadpath "C:\qiuyo\Documents\Projects\Codes\Project\Project\PlotOutData\PlotOutData"
+set xlabel "Time [sec]"
+set ylabel "Twr_Z088000_MxyT (N-m)"
+plot "EN30_LM120_90HH.out" using 1:($59) with lines title "Twr_Z088000_MxyT"

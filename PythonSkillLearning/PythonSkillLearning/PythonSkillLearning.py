@@ -20,17 +20,17 @@ print("c2: " + str(c2))
 
 # Def name of member of tuple
 # (type, version, solver)
-num_span = 12
+numspan = 12
 span = [x for x in range(12)]
 name = 'alpha_blade'
 
-blade = (num_span, span, name)
+blade = (numspan, span, name)
 
 print("blade: " + str(blade))
 
 from collections import namedtuple
 Blade = namedtuple('Blade', ['num_span', 'span', 'name'])
-b = Blade(num_span, span, name)
+b = Blade(numspan, span, name)
 print("b.num_span: " + str(b.num_span))
 print("b.span: " + str(b.span))
 print("b.name: " + str(b.name))

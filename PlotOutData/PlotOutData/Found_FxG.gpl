@@ -1,0 +1,4 @@
+set loadpath "C:\qiuyo\Documents\Projects\Codes\Project\Project\PlotOutData\PlotOutData"
+set xlabel "Time [sec]"
+set ylabel "Found_FxG (N)"
+plot "EN30_LM120_90HH.out" using 1:($177) with lines title "Found_FxG"

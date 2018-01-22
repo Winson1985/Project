@@ -1,0 +1,4 @@
+set loadpath "C:\qiuyo\Documents\Projects\Codes\Project\Project\PlotOutData\PlotOutData"
+set xlabel "Time [sec]"
+set ylabel "Nac_QyG (rad/s^2)"
+plot "EN30_LM120_90HH.out" using 1:($164) with lines title "Nac_QyG"

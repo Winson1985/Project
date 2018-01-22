@@ -1,0 +1,9 @@
+# reset
+# set terminal png font arial 14 size 800,600
+# set output 'pendulum2.png'
+
+set loadpath "D:\MyWork\MyProject\MBDX\Certification\enFAST\PreliminaryTest\NumericalDampingTest\Driver"
+set xlabel "Time [sec]"
+set ylabel "GenTorque (rpm)"
+plot "EN30_LM120_90HH.out" using 1:($185) with lines title "GenTorque"
+	 

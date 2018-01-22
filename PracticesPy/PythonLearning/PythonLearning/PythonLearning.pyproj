@@ -11,7 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>PythonLearning</Name>
     <RootNamespace>PythonLearning</RootNamespace>
-    <InterpreterId>Global|canopy.enthought.com|User</InterpreterId>
+    <InterpreterId>Global|ContinuumAnalytics|Anaconda36-64</InterpreterId>
     <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -23,11 +23,11 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <InterpreterReference Include="Global|canopy.enthought.com|User" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="funcs.py" />
     <Compile Include="PythonPractices_List.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -1,0 +1,4 @@
+set loadpath "C:\qiuyo\Documents\Projects\Codes\Project\Project\PlotOutData\PlotOutData"
+set xlabel "Time [sec]"
+set ylabel "Hub_MxR (N-m)"
+plot "EN30_LM120_90HH.out" using 1:($122) with lines title "Hub_MxR"

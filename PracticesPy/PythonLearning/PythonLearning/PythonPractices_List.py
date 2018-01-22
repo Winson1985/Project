@@ -157,3 +157,6 @@ print("logdamp = ", logdamp)
 from funcs import *
 logdamp = DampRatio2LogDamp(1/100.0)*100
 print("logdamp = ", logdamp)
+
+# Copy file from path A to path B
+import os

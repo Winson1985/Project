@@ -1,0 +1,4 @@
+set loadpath "C:\qiuyo\Documents\Projects\Codes\Project\Project\PlotOutData\PlotOutData"
+set xlabel "Time [sec]"
+set ylabel "B1Azimuth (deg)"
+plot "EN30_LM120_90HH.out" using 1:($184) with lines title "B1Azimuth"
