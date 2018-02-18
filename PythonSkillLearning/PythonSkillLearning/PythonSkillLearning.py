@@ -35,7 +35,42 @@ print("b.num_span: " + str(b.num_span))
 print("b.span: " + str(b.span))
 print("b.name: " + str(b.name))
 
+from module1 import *
+
+string = "Hello World"
+obj_list = []
+for i in range(0,10):
+    str1 = string + str(i)
+    obj = Display(str1)
+    obj_list.append(obj)
+
+print(obj_list)
+
+obj_list[3].display()
+
+obj_super = SuperDisplay("This is a super class obj")
+obj_super.display()
+
+obj_super.weapon.fire()
+
+
+import re
+string = "   'B1 Mx (Root Axes)' 'B2 Mx (Root Axes)' 'B3 Mx (Root Axes)'  "
+str_list = string.strip().split("' '")
+str_list2 = []
+for str in str_list:
+    char_list = re.findall("[^']", str)
+    str = ""
+    str = str.join(char_list)
+    str_list2.append(str)
+
+print(str_list2)
 
 
 
+dict = {'B1 Mx (Root Axes)' : 'Col1', \
+        'B2 Mx (Root Axes)' : 'Col2', \
+        'B3 Mx (Root Axes)' : 'Col3'}
+
+print(dict['B2 Mx (Root Axes)'])
 
