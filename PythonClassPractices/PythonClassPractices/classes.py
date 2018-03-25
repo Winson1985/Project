@@ -27,10 +27,13 @@ class Tower(CompBase):
         super().__init__(geodata) # geodata = GeoData()
         self.density = density
 
+    def volume_calc(self):
+        return self.density*100
+
     def mass_calc(self):
         '''Returns Tower mass'''
         return self.volume_calc()*self.density
-        
+
 
 
 
