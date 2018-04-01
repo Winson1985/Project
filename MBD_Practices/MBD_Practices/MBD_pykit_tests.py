@@ -58,6 +58,17 @@ def unit_test3():
     else:
         return False
 
+def unit_test4():
+    print("unit_test4:")
+    v0 = ColVector([0.5,-1.2,3.1])
+    a01 = RotQuatern(np.radians(90.0),ey)
+    a = a01.RotMat * v0
+    b = a01 * v0
+    if a.all() == b.all():
+        return True
+    else:
+        return False
+
 # Unit tests
 print(unit_test0())
 
@@ -66,3 +77,5 @@ print(unit_test1())
 print(unit_test2())
 
 print(unit_test3())
+
+print(unit_test4())

@@ -75,9 +75,20 @@ class RotQuatern(RotQuaternBase):
 
     # Operator *
     def __mul__(self, other):
-        return self.RotMat * other.RotMat
+        # RotQuatern * RotQuatern
+        if type(other) is type(self):
+            return self.RotMat * other.RotMat
+        # RotQuatern * ColVector
+        elif type(other) is type(ColVector([0.0,0.0,0.0])):
+            return self.RotMat * other
+
     def __rmul__(self, other):
-        return other * self.RotMat
+        # np.mat * RotQuatern
+        if type(other) is type(np.mat(np.zeros((3,3)))):
+            return other * self.RotMat
+        # RotQuatern * RotQuatern
+        elif type(other) is type(self):
+            return other.RotMat * self.RotMat
 
     # Returns member of RotQuatern object
     def __getitem__(self, Id):
