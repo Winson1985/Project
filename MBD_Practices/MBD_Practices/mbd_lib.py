@@ -1,6 +1,6 @@
 # This lib is used to test equations and theory of MBD
 # Issued by Yongxing.Qiu at March 21 2018
-# Last modified by Yongxing.Qiu at March 22 2018
+# Last modified by Yongxing.Qiu at April 1 2018
 
 import numpy as np
 import math as m
@@ -61,60 +61,25 @@ class RotQuaternBase():
 
 # RotQuatern class
 class RotQuatern(RotQuaternBase):
-    def __init__(self, angle = 0.0, direct = ex, \
-                 RotMat = np.mat(np.zeros((3,3))) ):
+    def __init__(self, angle = 0.0, direct = ex,
+                 RotMat = None ):
         super().__init__()
         self.angle = angle
         self.direct = direct
-        self.RotMat = RotMat
         # Returns RotMat from angle and direct
-        if self.RotMat.all() == 0.0:
+        if RotMat is None:
             self.Update(angle, direct)
-
-    # Returns RotMat
-    def RotMatrix(self):
-        if self.RotMat.all() != 0.0:
-            return self.RotMat
+            self.RotMat = self.rmat
         else:
-            return self.rmat
+            self.RotMat = RotMat
 
     # Operator *
     def __mul__(self, other):
-        return self.rmat * other.rmat
+        return self.RotMat * other.RotMat
+    def __rmul__(self, other):
+        return other * self.RotMat
 
-# Unit test
-def unit_test0():
-    # Method 1
-    v0 = ColVector([0.5,-1.2,3.1])
-    print('%s%s'% ("v0=",v0))
-    A1 = RotQuatern(np.radians(90.0),ey).RotMatrix()
-    A2 = RotQuatern(np.radians(90.0),ez).RotMatrix()
-    method1 = A2 * A1 * v0
-
-    # Method 2
-    A10 = RotQuatern(np.radians(90.0),ey).RotMatrix()
-    A21 = RotQuatern(np.radians(-90.0),ex).RotMatrix()
-    method2 = A10 * A21 * v0
-
-    if np.max(method2 - method1) >= 1e-5:
-        return False
-    else:
-        return True
-
-# Unit test for operator * over loaded
-def unit_test1():
-    v0 = ColVector([0.5,-1.2,3.1])
-    print('%s%s'% ("v0=",v0))
-    # Method 1
-    A10 = RotQuatern(np.radians(90.0),ey).RotMatrix()
-    A21 = RotQuatern(np.radians(-90.0),ex).RotMatrix()
-    method1 = A10 * A21 * v0
-
-    # Mehod 2
-    method2 = RotQuatern(np.radians(90.0),ey) * RotQuatern(np.radians(-90.0),ex) * v0
-
-    if np.max(method2 - method1) >= 1e-5:
-        return False
-    else:
-        return True
+    # Returns member of RotQuatern object
+    def __getitem__(self, Id):
+        return self.RotMat[Id[0], Id[1]]
 

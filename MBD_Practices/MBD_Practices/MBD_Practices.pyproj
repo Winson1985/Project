@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>07946b8d-9594-4dcc-9b57-36d1c4e47567</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>MBD_Practices.py</StartupFile>
+    <StartupFile>MBD_pykit_tests.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,7 +23,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="mbd_lib.py" />
-    <Compile Include="MBD_Practices.py" />
+    <Compile Include="MBD_pykit_tests.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />
